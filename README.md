@@ -13,7 +13,7 @@ Function #1 - `get_business_info`
     will return a list of the information, such as name, phone number,
     street address, city, state, and zip code for those businesses.
     
-    `from lambdata_jmmiddour.dspt7_utilities import get_business_info`
+`from lambdata_jmmiddour.dspt7_utilities import get_business_info`
 
 
 Function #2 - `address_split`
@@ -26,4 +26,4 @@ Function #2 - `address_split`
     Note: Once the columns are split,
         this function will remove the original columns.
         
-    `from lambdata_jmmiddour.dspt7_utilities import address_split`
+`from lambdata_jmmiddour.dspt7_utilities import address_split`
