@@ -3,7 +3,7 @@ My Lambda Data Science collection of utility functions.
 
 ## Installation:
 
-TO DO
+pip install -i https://test.pypi.org/simple/ dspt7-utilities-jmiddour==0.0.1
 
 ## Usage:
 
