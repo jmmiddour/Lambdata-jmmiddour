@@ -1,5 +1,20 @@
 # Need to create a class to work with my functions from assignment 1 (dspt7_utilities)
 class Business():
+    '''
+    This class will enable you to print certain information for specific businesses.
+
+    Attributes:
+    -----------
+      name : The business(es) name(s)
+      number : The number where the business is located on the street
+      street : The name of the street where the business is located
+      city : The city in which the business is located
+
+    Returns:
+    --------
+      name_number : Prints a string with the business name and phone number
+      name_address : Prints a string with the business name, steet name, and city
+    '''
     def __init__(self, name, number, street, city):
         self.name = name
         self.number = number

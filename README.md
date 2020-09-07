@@ -27,3 +27,10 @@ My Lambda Data Science collection of utility functions.
         this function will remove the original columns.
         
   `from lambdata_jmmiddour.dspt7_utilities import address_split`
+
+
+- Class Object - `Business`
+
+      This class will enable you to print certain information for specific businesses.
+
+  `from lambdata_jmmiddour.assignment2 import Business`
