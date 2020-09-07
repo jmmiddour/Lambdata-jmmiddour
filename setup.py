@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dspt7_utilities_jmiddour", # the name that you will install via pip
-    version="0.0.1",
+    version="0.0.2",
     author="Joanne Middour",
     author_email="joanne-middour@outlook.com",
     description="Unit 3 Utilities Testing",
@@ -22,5 +22,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent"
     ],
-    python_requires='>=3.6'
+    python_requires='>=3.7'
 )

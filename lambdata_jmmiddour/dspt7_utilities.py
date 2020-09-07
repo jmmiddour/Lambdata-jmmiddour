@@ -5,10 +5,17 @@ def get_business_info(business, city, state):
     will return a list of the information, such as name, phone number,
     street address, city, state, and zip code for those businesses.
 
-      business = type or name of business
-      city = name of the city where the business is located
-      state = the 2 character abbrivation for the state in which the
-      business is located.
+    Parameters:
+    -----------
+      business : type or name of business
+      city : name of the city where the business is located
+      state : the 2 character abbrivation for the state in which the
+        business is located.
+
+    Returns:
+    --------
+      DataFrame with information scraped from the yellowpages website, 
+        based on the parameters entered into the function.
     '''
     # Import libraries needed:
     import pandas as pd
@@ -59,16 +66,21 @@ def get_business_info(business, city, state):
 def address_split(df, col1, col2):
     '''
     This function will take an address column with the number address and
-    street name and split it into two seperate columns, (number, name). It will
-    also split a column with city, state, and zip code into 3 seperate columns,
-    (city, state, zipcode).
+    street name and split it into two seperate columns. It will
+    also split a column with city, state, and zip code into 3 seperate columns.
 
-    Note: Once the columns are split,
-        this function will remove the original columns.
-
-    - df = your Data Frame's name
-    - col1 = the column with the address you want to split.
-    - col2 = the column with the city, state, and zip code.
+    Parameters:
+    -----------
+      df : The name of your DataFrame
+      col1 : The column with the address you want to split.
+      col2 : The column with the city, state, and zip code.
+    
+    Returns:
+    --------
+      DataFrame with 3 more columns. There will be 5 columns total with address
+        values.
+      Once the columns are split,
+        this function will also remove the original columns.
     '''
     # Split the address column into 2 seperate columns:
     df[['Address_No', 'Street_Name']] = df[col1].str.split(n=1, expand=True)
@@ -83,3 +95,11 @@ def address_split(df, col1, col2):
     df.drop(columns=[col1, col2], inplace=True)
 
     return df
+
+
+if __name__ == "__main__":
+    df = get_business_info('fast food', 'jacksonville', 'fl')
+    print(f'DataFrame after running function 1:\n', df.head(), '\n')
+
+    df2 = address_split(df, 'Street', 'City_State_Zip')
+    print(f'DataFrame after running function 2:\n', df2.head())
