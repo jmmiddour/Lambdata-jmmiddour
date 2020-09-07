@@ -42,19 +42,22 @@ def get_business_info(business, city, state):
         for info in information:
             # Get all the attribrutes we need:
             name = info.find('a', class_="business-name").span
-            name = name.text if name else 'none'
+            name = name.text if name else None
             phone = info.find('div', class_='phones phone primary')
-            phone = phone.text if phone else 'none'
+            phone = phone.text if phone else None
             street = info.find('div', class_='street-address')
-            street = street.text if street else 'none'
+            street = street.text if street else None
             area = info.find('div', class_='locality')
-            area = area.text if area else 'none'
+            area = area.text if area else None
 
             # Store the values in a data object:
             data['Name'].append(name)
             data['Phone_No'].append(phone)
             data['Street'].append(street)
             data['City_State_Zip'].append(area)
+
+    else:
+        print('There is an error, the website can not be reached.')
 
     # Turn data collected into a pandas dataframe:
     business_info = pd.DataFrame(data, columns=['Name', 'Phone_No', 'Street',
