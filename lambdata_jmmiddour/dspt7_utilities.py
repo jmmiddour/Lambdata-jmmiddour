@@ -14,7 +14,7 @@ def get_business_info(business, city, state):
 
     Returns:
     --------
-      DataFrame with information scraped from the yellowpages website, 
+      DataFrame with information scraped from the yellowpages website,
         based on the parameters entered into the function.
     '''
     # Import libraries needed:
@@ -74,7 +74,7 @@ def address_split(df, col1, col2):
       df : The name of your DataFrame
       col1 : The column with the address you want to split.
       col2 : The column with the city, state, and zip code.
-    
+
     Returns:
     --------
       DataFrame with 3 more columns. There will be 5 columns total with address
